@@ -18,7 +18,7 @@ class Category extends Model
         'image',
         'meta_title',
         'meta_keyword',
-        'medimeta_description',
+        'meta_description',
         'status'
     ];
 }
