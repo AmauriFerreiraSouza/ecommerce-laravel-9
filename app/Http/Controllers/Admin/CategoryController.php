@@ -17,7 +17,6 @@ class CategoryController extends Controller
 
     public function create()
     {
-
         return view('admin.category.create');
     }
 
@@ -35,7 +34,7 @@ class CategoryController extends Controller
             $ext = $file->getClientOriginalExtension();//pego a extenção original
             $filename = time().'.'.$ext;//crio um novo nome para este arquivo
 
-            $file->move('uploads/category/',$filename);//movo ele para um pasta desejada
+            $file->move('uploads/category/', $filename);//movo ele para um pasta desejada
 
             $category->image = $filename;//salvo o nome do arquivo
         }
@@ -47,6 +46,6 @@ class CategoryController extends Controller
         $category->status = $request->status == true ? '1':'0';
         $category->save();
 
-        return redirect('admin/category')->with('message', 'Categoria adicionada com sucesso!!');
+        return redirect('admin/category')->with('message', 'Categoria adicionada com sucesso!');
     }
 }

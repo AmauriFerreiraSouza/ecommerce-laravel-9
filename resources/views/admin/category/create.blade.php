@@ -19,14 +19,17 @@
                         <div class="col-md-6 mb-3">
                             <label>Nome</label>
                             <input type="text" name="name" class="form-control" />
+                            @error('name')<small class="text-danger">{{$message}}</small>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label>Slug</label>
                             <input type="text" name="slug" class="form-control" />
+                            @error('slug')<small class="text-danger">{{$message}}</small>@enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Descrição</label>
                             <textarea name="description" class="form-control" rows="3"></textarea>
+                            @error('description')<small class="text-danger">{{$message}}</small>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
                             <label>Imagem</label>
@@ -44,14 +47,17 @@
                         <div class="col-md-12 mb-3">
                             <label>Meta Título</label>
                             <input type="text" name="meta_title" class="form-control" />
+                            @error('meta_title')<small class="text-danger">{{$message}}</small>@enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Meta Keyword</label>
                             <textarea name="meta_keyword" class="form-control"></textarea>
+                            @error('meta_keyword')<small class="text-danger">{{$message}}</small>@enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Meta Descrição</label>
                             <textarea name="meta_description" class="form-control" rows="3"></textarea>
+                            @error('meta_description')<small class="text-danger">{{$message}}</small>@enderror
                         </div>
 
                         <div class="col-md-12 mb-3">

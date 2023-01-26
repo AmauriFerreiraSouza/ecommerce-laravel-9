@@ -4,6 +4,11 @@
 
 <div class="row">
     <div class="col-md-12 grid-margin">
+
+        @if (session('message'))
+            <div class="alert alert-success"> {{ session('message') }}</div>
+        @endif
+
         <div class="card">
             <div class="card-header">
                 <h4>
@@ -12,7 +17,7 @@
                 </h4>
             </div>
             <div class="card-body">
-            
+
             </div>
         </div>
     </div>
