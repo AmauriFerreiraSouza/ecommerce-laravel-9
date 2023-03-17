@@ -30,7 +30,7 @@
                                     <td> {{ $category->name}}</td>
                                     <td> {{ $category->status == 1 ? 'Hidden' : 'Visible'}}</td>
                                     <td> 
-                                        <a href="" class="btn btn-success">EDIT</a>
+                                        <a href="{{ url('/admin/category/'.$category->id.'/edit') }}" class="btn btn-success">EDIT</a>
                                         <a href="" class="btn btn-danger">DELETE</a>
                                     </td>
                                 </tr>
