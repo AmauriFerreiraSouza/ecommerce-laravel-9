@@ -22,13 +22,12 @@ class Index extends Component
     public function destroyCategory()
     {
         $category = Category::find($this->category_id);
-        $path = 'uploads/category'.$category->image;
+        $path = 'uploads/category/'.$category->image;
         if (File::exists($path)) {
             File::delete($path);
         }
         $category->delete();
         session()->flash('message', 'Categoria exluida com sucesso!');
-        $this->dispatchBrowserEvent('close_modal');
     }
 
     public function render()

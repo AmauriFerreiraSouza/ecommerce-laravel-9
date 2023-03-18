@@ -13,7 +13,7 @@
                         <p>Tem certeza que deseja excluir essa categoria.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Sim</button>
+                        <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Sim</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
                     </div>
 
@@ -70,14 +70,3 @@
         </div>
     </div>
 </div>
-
-@push('script')
-
-    <script>
-        window.addEventListener('close_modal', event =>{
-
-            $('#deleteModal').modal('hide');
-        })
-    </script>
-
-@endpush
